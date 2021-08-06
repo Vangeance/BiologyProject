@@ -1,3 +1,5 @@
+import time
+from skimage.metrics import structural_similarity
 import numpy as np
 import re
 import os
@@ -24,4 +26,10 @@ print("++++++++++++++++++++++")
 c[2]*=2
 print(c)
 
-d = np.array([1,2,3]).reshape((3,1))
+img1 = Image.open("./FruitingBodydata4/Early/Early_1/1.tif")
+img_arr1 = np.array(img1.getdata()).reshape((1200, 1600))
+
+img2 = Image.open("./FruitingBodydata4/Early/Early_1/1441.tif")
+img_arr2 = np.array(img2.getdata()).reshape((1200, 1600))
+print(structural_similarity(img_arr1, img_arr2))
+
