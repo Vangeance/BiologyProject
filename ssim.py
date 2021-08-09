@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
+
 def ssim():
     ssim = []
     for i in range(1440):
@@ -14,6 +15,7 @@ def ssim():
         img_arr2 = np.array(img2.getdata()).reshape((1200, 1600))
         ssim.append(structural_similarity(img_arr1, img_arr2))
     return ssim
+
 
 def psnr():
     psnr = []
