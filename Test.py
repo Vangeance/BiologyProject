@@ -37,8 +37,6 @@ b = [31-x for x in b]
 # plt.plot(b)
 # plt.show()
 
-a = [-2,2,0,1]
-b = [n+2 if n<0 else n for n in a]
-print(b)
-
-print(int(3/2))
+a = np.array([[1,2,3],
+              [4,5,6]])
+print(np.where(a>2,1,0))
