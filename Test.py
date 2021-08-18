@@ -40,3 +40,11 @@ b = [31-x for x in b]
 a = np.array([[1,2,3],
               [4,5,6]])
 print(np.where(a>2,1,0))
+
+import numpy as np
+import cv2
+
+img = cv2.imread('1441.tif',0)
+ret, thresh = cv2.threshold(img, 110, 255,cv2.THRESH_BINARY)
+print(ret, thresh)
+cv2.imwrite('output.png',thresh)
